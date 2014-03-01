@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="1260" height="660" style="border:1px solid #c3c3c3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+
+var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+setTimeout(function level1(){
+var imgOb1 = new Image();
+
+      imgOb1.onload = function() {
+        ctx.drawImage(imgOb1, 0, 0 , 1260 , 660);
+      };
+      imgOb1.src = './bg/level1.jpg';},0);
+setTimeout(function level2(){
+var imgOb2 = new Image();
+
+      imgOb2.onload = function() {
+        ctx.drawImage(imgOb2, 0, 0 , 1260 , 660);
+      };
+      imgOb2.src = './bg/level2.jpg';},4000);
+setTimeout(function level2(){
+var imgOb3 = new Image();
+
+      imgOb3.onload = function() {
+        ctx.drawImage(imgOb3, 0, 0 , 1260 , 660);
+      };
+      imgOb3.src = './bg/level3.jpg';},8000);
+setTimeout(function level4(){
+var imgOb4 = new Image();
+
+      imgOb4.onload = function() {
+        ctx.drawImage(imgOb4, 0, 0 , 1260 , 660);
+      };
+      imgOb4.src = './bg/level4.jpg';},12000);
+setTimeout(function level5(){
+var imgOb5 = new Image();
+
+      imgOb5.onload = function() {
+        ctx.drawImage(imgOb5, 0, 0 , 1260 , 660);
+      };
+      imgOb5.src = './bg/level5.jpg';},16000);
+</script>
+
+</body>
+</html>
+
+
