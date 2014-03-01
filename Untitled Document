@@ -1,0 +1,67 @@
+<html>
+<head>
+<script type="text/javascript">
+const FPS = 60;
+
+var canvas = null;
+var context2D = null;
+
+var cursorImg = new Image();
+cursorImg.src = "images/cursorexample.png";
+
+var bulletHoleImg = new Image();
+bulletHoleImg.src = "images/bullethole.png";
+var bulletHolesX = new Array();
+var bulletHolesY = new Array();
+for (var i=0; i<50; i++) {
+ bulletHolesX[i] = -500;
+ bulletHolesY[i] = -500;
+}
+bulletNum = 0;
+
+window.addEventListener('mousemove', mouseMoved, true);
+window.addEventListener('click', clicked, true);
+var mouseX = 0;
+var mouseY = 0;
+
+window.onload = init;
+function init() {
+ canvas = document.getElementById('canvas1');
+ context2D = canvas.getContext('2d');
+ 
+ setInterval(draw, 1000/FPS);
+}
+
+function draw() {
+ context2D.clearRect(0, 0, canvas.width, canvas.height);
+ for (var i=0; i<50; i++) {
+  context2D.drawImage(bulletHoleImg, bulletHolesX[i]-(bulletHoleImg.width/2), bulletHolesY[i]-(bulletHoleImg.height/2));
+ }
+ context2D.drawImage(cursorImg, mouseX-(cursorImg.width/2), mouseY-(cursorImg.width/2));
+}
+
+function mouseMoved(e) {
+ 
+ mouseX = e.pageX;
+ mouseY = e.pageY;
+ 
+}
+
+function clicked(e) {
+ 
+ bulletHolesX[bulletNum] = mouseX;
+ bulletHolesY[bulletNum] = mouseY;
+ bulletNum++;
+ if (bulletNum > 50) {
+  bulletNum = 0;
+ }
+ 
+}
+</script>
+</head>
+<body style="padding: 0px; margin: 0px;">
+ <canvas id="canvas1" width="600" height="480" style="background-color: #A9A9A9;">
+ Browser not compatible with HTML5 canvas
+ </canvas>
+</body>
+</html>
