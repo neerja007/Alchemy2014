@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="css/jquery.toolbars.css">
+  <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.icons.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.toolbar.min.js"></script>
+</head>
+
+<body>
+ 
+   
+   
+        <span id="editmenu"><img src="images/edit-profile-icon.png" alt="Edit"></span>
+         <div id="user-options" class="toolbar-icons" style="display: none;">
+			    <a href="#"><em class="icon-user"></em></a>
+			    <a href="#"><em class="icon-edit"></em></a>
+			    <a href="#"><em class="icon-comment"></em></a>
+			    <a href="#"><em class="icon-picture"></em></a>
+			    <a href="#"><em class="icon-facetime-video"></em></a>
+			    <a href="#"><em class="icon-cog"></em></a>
+		    </div>
+       
+      
+
+<script type="text/javascript">
+$(function(){
+  $('#editmenu').toolbar({
+	  content: '#user-options',
+	  position: 'bottom',
+	  hideOnClick: true
+  });
+  $('#editmenu').on('toolbarItemClick', function(event){
+    // when the user clicks an icon we call this function
+    console.dir(event);
+    $(this).trigger('click');
+  });
+});
+</script>
+</body>
+</html>

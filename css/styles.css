@@ -1,0 +1,143 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html { overflow-y: scroll; }
+body { 
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 62.5%; 
+  color: #fff;
+  line-height: 1; 
+  background: #353535 url('bgtile.png'); /* http://subtlepatterns.com/navy/ */
+}
+
+br { display: block; line-height: 2.2em; } 
+hr { border: 1px solid #aaa; margin-bottom: 15px; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+input, textarea { 
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none; 
+}
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; } 
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+a { color: #96bbe4; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1 { 
+  font-size: 3.1em;
+  line-height: 1.6em;
+  font-weight: bold;
+  color: #cbcbcb;
+}
+h2 {
+  font-size: 2.6em;
+  line-height: 1.5em;
+  font-weight: bold;
+  color: #eee;
+}
+h3 {
+  font-size: 1.8em;
+  line-height: 1.3em;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: -0.1em;
+  color: #898989;
+}
+
+p { 
+  font-size: 1.4em;
+  line-height: 1.2em;
+  margin-bottom: 12px;
+  color: #fff;
+}
+small { font-size: 0.9em; font-weight: bold; }
+
+#wrapper {
+  width: 750px;
+  margin: 0 auto;
+  padding-top: 45px;
+}
+
+#miniprofile {
+  display: block;
+  width: 100%;
+}
+
+#avatar {
+  display: block;
+  float: right;
+  background: #222;
+  padding: 10px;
+  margin-left: 10px;
+  -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  -moz-box-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.2);
+}
+
+#menucontainer { display: block; float: right; }
+#editmenu {
+  display: block;
+  margin-top: 5px;
+  width: 36px;
+  height: 30px;
+  text-align: center;
+  padding-top: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #121212;
+  box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.3), 0px 1px 0px 0px rgba(255,255,255,0.2);
+  background-color: #434343;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#595959), to(#434343));
+  background-image: -webkit-linear-gradient(top, #595959, #434343);
+  background-image: -moz-linear-gradient(top, #595959, #434343);
+  background-image: -ms-linear-gradient(top, #595959, #434343);
+  background-image: -o-linear-gradient(top, #595959, #434343);
+  background-image: linear-gradient(top, #595959, #434343);
+  cursor: pointer;
+}
+#editmenu:active {
+  background-color: #404040;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#505050), to(#404040));
+  background-image: -webkit-linear-gradient(top, #505050, #404040);
+  background-image: -moz-linear-gradient(top, #505050, #404040);
+  background-image: -ms-linear-gradient(top, #505050, #404040);
+  background-image: -o-linear-gradient(top, #505050, #404040);
+  background-image: linear-gradient(top, #505050, #404040);
+  box-shadow: inset 0px 2px 6px 1px rgba(0,0,0,0.65), 0px 1px 0px 0px rgba(255,255,255,0.2);  
+}
+
+#editmenu img { opacity: 0.7; }
+#editmenu:hover img { opacity: 1.0; }
+
+/* clearfix */
+.clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.clearfix { display: inline-block; }
+ 
+html[xmlns] .clearfix { display: block; }
+* html .clearfix { height: 1%; }

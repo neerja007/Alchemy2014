@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 	<html>
 <head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 <link href="./toolbar/jquery.toolbars.css" rel="stylesheet" />
 <link href="./toolbar/bootstrap.icons.css" rel="stylesheet" />
-<h2>HEADER</h2>
-<div id="user-toolbar-options">
-	<a href="#"><i class="icon-user"></i></a>
-	<a href="#"><i class="icon-star"></i></a>
-	<a href="#"><i class="icon-edit"></i></a>
-	<a href="#"><i class="icon-delete"></i></a>
-	<a href="#"><i class="icon-ban"></i></a>
-</div>	
+ 
+  <link rel="stylesheet" type="text/css" media="all" href="css/jquery.toolbars.css">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.toolbar.min.js"></script>
+<span id="editmenu"><img src="images/edit-profile-icon.png" alt="Edit"></span>
+         <div id="user-options" >
+			    <a href="#"><em class="icon-user"></em></a>
+			    <a href="#"><em class="icon-edit"></em></a>
+			    <a href="#"><em class="icon-comment"></em></a>
+			    <a href="#"><em class="icon-picture"></em></a>
+			    <a href="#"><em class="icon-facetime-video"></em></a>
+			    <a href="#"><em class="icon-cog"></em></a>
+		    </div>
+       
 <canvas id="myCanvas" width="1260" height="660" style="border:1px solid #c3c3c3;">
 Your browser does not support the HTML5 canvas tag.
 </canvas>
@@ -68,7 +75,7 @@ function mouseMoved(e) {
 
 window.addEventListener('click', clicked, true);
 function clicked(e) {
- alert("hello");
+
 }
 
 
@@ -83,10 +90,20 @@ window.onmouseup = function(e) {
 </head>
 <body>
 
-<script>
-$('#user-toolbar').toolbar({
-	content: '#user-toolbar-options', 
-	position: 'top'
+      
+
+<script type="text/javascript">
+$(function(){
+  $('#editmenu').toolbar({
+	  content: '#user-options',
+	  position: 'bottom',
+	  hideOnClick: true
+  });
+  $('#editmenu').on('toolbarItemClick', function(event){
+    // when the user clicks an icon we call this function
+    console.dir(event);
+    $(this).trigger('click');
+  });
 });
 </script></body>
 </html>
